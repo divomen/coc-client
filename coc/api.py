@@ -28,7 +28,7 @@ def build_uri(endpoint, api_version, uri_parts, uri_args={}):
     url_to_call = "/".join(all_uri_parts)
     # add params if any
     if uri_args:
-        url_to_call = "{}?{}".format(url_to_call, urllib.urlencode(uri_args))
+        url_to_call = "{}?{}".format(url_to_call, urllib.parse.urlencode(uri_args))
     # return
     return url_to_call
 
